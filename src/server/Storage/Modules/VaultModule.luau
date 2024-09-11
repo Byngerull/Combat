@@ -28,7 +28,7 @@ function module.Vault()
         if ray then
             if ray.Instance.Size.Y < 5 then
                 local bodyVelocity = Instance.new("BodyVelocity", humanoidRootPart)
-                bodyVelocity.MaxForce = Vector3.one * 999999999999
+                bodyVelocity.MaxForce = Vector3.one * math.huge
 				bodyVelocity.Velocity = (humanoidRootPart.AssemblyLinearVelocity/25  + humanoidRootPart.CFrame.LookVector) * 25 + humanoidRootPart.CFrame.UpVector * 5
 				
 				local animationTrack = character:FindFirstChildWhichIsA("Humanoid").Animator:LoadAnimation(animation)
